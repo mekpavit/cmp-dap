@@ -107,6 +107,7 @@ function source:complete(_, callback)
     frameId = (session.current_frame or {}).id,
     text = typed,
     column = col + 1 - offset,
+    line = 1,
   }, function(err, response)
     if err then
       return
